@@ -30,7 +30,7 @@
 | 工商银行 | 601398.SH |  5.160 | 5.22 |1000股 | 1.16% |
 | 可转债 | 733133 | 100 | 100 |10张 | 0% |
 
-![image](https://github.com/xxx/xxx/blob/master/xxx/xxx.png)
+![image](https://github.com/Jupiter-19/stocks/blob/master/stocks.png)
 
 注释：本人在东方财富和中信证券两个券商开户，东方财富为主账户。
 
