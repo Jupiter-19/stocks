@@ -1,7 +1,8 @@
 import json
 import pandas as pd
 
-# data_url = https://xueqiu.com/service/v5/stock/screener/quote/list?page=1&size=9999&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz%27
+# data_url = 'https://xueqiu.com/service/v5/stock/screener/quote/list?page=1&size=9999&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz%27'
+# head = {'User-Agent':'Mozilla/5.0',"page":"1","size":"9999","order":"desc","orderby":"percent","order_by":"percent","market":"CN","type":"sh_sz%27"}
 
 pd.set_option('display.unicode.east_asian_width', True)
 
@@ -25,4 +26,8 @@ df.loc[:,"盈亏额"] = (df.loc[:,"当前价"] - df.loc[:,"平均成本价"]) * 
 print(df)
 print('-' * 68)
 print("sum:", sum(df.loc[:,"盈亏额"]), 'rmb')
+df.loc[:,"盈亏额"] = df.loc[:,"盈亏额"].apply(lambda x: round(x,0))
+df.loc[:,"市值"] = df.loc[:,"市值"].apply(lambda x: round(x,0))
 df.to_csv("my_stocks.csv", index=False, encoding='gbk')
+
+
