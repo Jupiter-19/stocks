@@ -76,7 +76,7 @@ class Stock:
         """
         查询收益情况
         """
-        f = open("myStock.yml", "r", encoding="utf-8")
+        f = open("../myStock.yml", "r", encoding="utf-8")
         my_stock = yaml.load(f, Loader=yaml.FullLoader)
         f.close()
         money, earning = 0, 0
@@ -98,4 +98,4 @@ class Stock:
 if __name__ == '__main__':
     s = Stock()
     s.update_data()
-    s.show_data()
+    # s.show_data()
